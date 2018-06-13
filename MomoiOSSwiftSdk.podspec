@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "MomoiOSSwiftSdk"
-  s.version      = "1.0.0"
+  s.version      = "2.0.0"
   s.summary      = "MoMo mobile SDK"
 
   # This description is used to generate tags and improve search results.
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/momodevelopment/MomoiOSSwiftSdk.git"
   s.license      = "MIT"
   s.author             = { "Lanh Luu" => "lanh.luu@mservice.com.vn" }
-  s.platform     = :ios, "9.0"
+  s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
   # s.ios.deployment_target = "5.0"
@@ -44,8 +44,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/momodevelopment/MomoiOSSwiftSdk.git", :tag => "1.0.0" }
-  s.source_files  = "MomoiOSSwiftSdk", "MomoiOSSwiftSdk/**/*"
+  s.source       = { :git => "https://github.com/momodevelopment/MomoiOSSwiftSdk.git", :tag => "2.0.0" }
+  s.source_files  = "MomoiOSSwiftSdk", "**/*"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
