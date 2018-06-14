@@ -23,7 +23,7 @@ public class MoMoPayment: NSObject {
         return _sharedInstance
     }
     
-    open func initMerchant(merchantCode: String, merchantName: String, merchantNameLabel: String) {
+    public static func initMerchant(merchantCode: String, merchantName: String, merchantNameLabel: String) {
         
         MoMoConfig .setMerchantcode(merchantCode: merchantCode)
         MoMoConfig .setMerchantname(merchantName: merchantName)
@@ -130,9 +130,9 @@ public class MoMoPayment: NSObject {
         let bundleId = Bundle.main.bundleIdentifier
         //Open MoMo App to get token
         var inputParams = "action=\(MOMO_PAY_SDK_ACTION_GETTOKEN)&partner=merchant"
-        paymentInfo?[MOMO_PAY_CLIENT_MERCHANT_CODE_KEY] = MoMoConfig.getMerchantcode()
-        paymentInfo?[MOMO_PAY_CLIENT_MERCHANT_NAME_KEY] = MoMoConfig.getMerchantname()
-        paymentInfo?[MOMO_PAY_CLIENT_MERCHANT_NAME_LABEL_KEY] = MoMoConfig.getMerchantnameLabel()
+        //paymentInfo?[MOMO_PAY_CLIENT_MERCHANT_CODE_KEY] = MoMoConfig.getMerchantcode()
+        //paymentInfo?[MOMO_PAY_CLIENT_MERCHANT_NAME_KEY] = MoMoConfig.getMerchantname()
+        //paymentInfo?[MOMO_PAY_CLIENT_MERCHANT_NAME_LABEL_KEY] = MoMoConfig.getMerchantnameLabel()
         paymentInfo?[MOMO_PAY_CLIENT_PUBLIC_KEY_KEY] = ""
         paymentInfo?[MOMO_PAY_CLIENT_IP_ADDRESS_KEY] = MoMoConfig.getIPAddress()
         paymentInfo?[MOMO_PAY_CLIENT_OS_KEY] = MoMoConfig.getDeviceInfoString()
@@ -163,9 +163,8 @@ public class MoMoPayment: NSObject {
                 }
                 else {
                     inputParams.append("&\(key as! String)=\(paymentInfo?[key] as! String)")
-                    print("<MoMoPay> param \(key) = \(paymentInfo?[key] as! String)")
                 }
-                
+                print("<MoMoPay> request param > \(key) = \(paymentInfo?[key] as! String)")
             }
             
         }
