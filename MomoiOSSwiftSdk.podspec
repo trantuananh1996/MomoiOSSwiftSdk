@@ -45,7 +45,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => "https://github.com/momodevelopment/MomoiOSSwiftSdk.git", :tag => "2.1.1" }
-  s.source_files  = "MomoiOSSwiftSdk", "**/*.{h,mm,swift,md,png}"
+  s.source_files  = "MomoiOSSwiftSdk", "**/*.{h,mm,swift}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
